@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+body {
+  font-family: "Inter", sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.custom-pagination .swiper-pagination-bullet {
+  @apply w-[7px] h-[7px] bg-custom-pink opacity-50 transition-all;
+}
+
+.custom-pagination .swiper-pagination-bullet-active {
+  @apply bg-custom-pink rounded-[4px] w-[19px] h-[7px]  opacity-100;
+}
+
+ .swiper-button-prev,
+ .swiper-button-next {
+  width: 50px !important;
+  height: 50px !important;
+ 
+  border-radius: 50% !important;
+  font-size: 16px !important; /* Smaller icon size */
+  transform: scale(0.7) !important; /* Reduce scale */
+}
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  transform: scale(0.8); /* Slightly enlarge on hover */
+}
+.Toastify__toast-container {
+  z-index: 9999 !important;
+}
+.custom-navigation {
+  display: flex !important;
+  flex-direction: row-reverse !important; /* يعكس ترتيب الأسهم */
+  align-items: center;
+  justify-content: center;
+  /* background-color: white; */
+  padding: 8px;
+  border-radius: 50px; /* يجعل الخلفية دائرية */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  content: "" !important;
+}
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  content: "" !important;
+}
+
+.bestSeller-pagination .swiper-button-prev,
+.bestSeller-pagination .swiper-button-next {
+  background-color: #f82ba9 !important;
+}
+.input-style {
+  @apply w-full p-3 border border-gray-300 rounded-[10px] focus:outline-none focus:ring-2 focus:ring-pink-500;
+}
+
+.btn-primary {
+  @apply rounded-[20px] bg-custom-pink px-3 py-2 text-white;
+}
